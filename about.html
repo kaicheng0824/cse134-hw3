@@ -39,10 +39,11 @@
 
             details[open] summary {
                 animation: expand 0.6s ease-in-out;
+                animation-fill-mode: forwards;
             }
 
             @keyframes expand {
-                0%    {opacity: 1; margin-bottom: -15px}
+                0%    {opacity: 1; margin-bottom: -10px}
                 100%  {opacity: 1; margin-top: 0px}
             }
             section {
@@ -65,7 +66,7 @@
             #intro {
                 margin-top: auto;
                 margin-bottom: auto;
-                border: solid 1px black;
+                /* border: solid 1px black; */
                 grid-row: 1;
                 /* display: block; */
                 /* grid-template-columns: 1fr 2fr; */
@@ -74,14 +75,14 @@
             #education {
                 margin-top: 0px;
                 margin-bottom: auto;
-                border: solid 1px black;
+                /* border: solid 1px black; */
                 grid-row: 2;
                 display: block;
                 /* grid-template-columns: 1fr 2fr; */
             }
 
             #funfact {
-                border: solid 1px black;
+                /* border: solid 1px black; */
                 margin-top: auto;
                 margin-bottom: auto;
                 grid-row: 3;
@@ -89,8 +90,11 @@
                 grid-template-columns: 1fr 2fr;
             }
 
-            #education > *, #funfact > * {
-                padding: 0em;
+            #funfact_list {
+                padding: 1em;
+                margin: 2em;
+                margin-top: 1em;
+                border-radius: 2em;
             }
 
             #intro_pic {
@@ -110,7 +114,7 @@
                 font-size: 1.5em;
             }
 
-            #education_img {
+            .about_img {
                 margin-top: auto;
                 margin-bottom: auto;
                 padding: 0.5em;
@@ -126,6 +130,20 @@
                 padding: 0.5em;
                 text-decoration: underline;
                 
+            }
+
+            #funfact_text > ul > li {
+                padding: 0.5em;
+            }
+
+            #funfact_text > ul > li > * {
+                margin-top: 10px;
+            }
+
+            #funfact_text > ul > li > h4 {
+                margin-top: 0;
+                text-decoration: underline;
+                font-size: 1.1em;
             }
 
             #education_text > ul > li:hover {
@@ -243,7 +261,7 @@
             </section> -->
             <section id="intro">
                 <ul>
-                    <li id="intro_pic">
+                    <li class="about_img">
                         <figure>
                             <picture>
                                 <!-- Big -->
@@ -251,7 +269,7 @@
                                 <!-- other case -->
                                 <img width="300px" height="200px" src="asset/profile-small.png"/>
                             </picture>
-                            <figcaption>A picture of me hiking the mission peak in Fremont</figcaption>
+                            <figcaption>Mission Peak Hike, Fremont</figcaption>
                         </figure>     
                     </li>
                     <li id="intro_text">
@@ -280,7 +298,7 @@
             </section>
             <section id="education">
                 <ul>
-                    <li id="education_img">
+                    <li class="about_img">
                         <figure>
                             <picture>
                                 <img id="schoolPic" width="300px" height="200px" src="asset/ucsd.png"/>
@@ -346,35 +364,40 @@
             </section>
 
             <section id="funfact">
-                <h3 style="text-align: center;">Fun facts</h3>
                 <ul>
-                    <li id="">
+                    <li class="about_img">
                         <figure>
                             <picture>
-                                <img width="300px" height="200px" src="asset/ucsd.png"/>
+                                <img width="300px" height="250px" src="asset/Gyudon.png" alt="gyudon bowl"/>
                             </picture>
-                            <figcaption>UC San Diego's Giesel Library</figcaption>
+                            <figcaption>Gyudon Bowl</figcaption>
                         </figure>   
                     </li>
-                    <li>
-                        <h4>Favorite Piece of Code</h4>
-                        <pre>
-                        <code>
+                    <li id="funfact_text">
+                        <h3 style="text-align: center;">Fun facts</h3>
+                        <ul id="funfact_list" class="major-list" style="background-color: rgb(127, 115, 115,0.2);">
+                            <li>
+                                <h4>Favorite Piece of Code</h4>
+                                <pre>
+                                    <code>
 #include &lt;stdio.h>
 int main() {
     for(;;){
         printf(<span>"Hello World\n"</span>);
     }
 }
-                        </code>
-                    </li>
-                    <li>
-                        <h4>Favorite Food</h4>
-                        <p>Gyudon Bowl</p>
-                    </li>
-                    <li>
-                        <h4>Favorite Book</h4>
-                        <em>Range: Why Generalists Triumph in a Specialized World</em>
+                                    </code>
+                                </pre>
+                            </li>
+                            <li>
+                                <h4>Favorite Food</h4>
+                                <p>Gyudon Bowl</p>
+                            </li>
+                            <li>
+                                <h4>Favorite Book</h4>
+                                <p><em>Range: Why Generalists Triumph in a Specialized World</em></p>
+                            </li>
+                        </ul>
                     </li>
                 </ul>
             </section>
