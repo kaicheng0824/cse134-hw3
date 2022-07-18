@@ -22,6 +22,8 @@
 
 body {
     min-width: 750px; max-width:1200px;
+    margin-left: auto;
+    margin-right: auto;
     /* background-color: white; */
     /* background-image: url(asset/zen.png); */
     background-position:top;
@@ -61,13 +63,14 @@ footer {
     padding: 1em 1em 1em 1em;
     /* border: 1px solid black; */
     font-size: 1.5em;
-    /* background-color: var(--header_color); */
-    background: linear-gradient(180deg,grey,white);
+    background-color: var(--header_color);
+    /* background: linear-gradient(180deg,grey,white); */
 }
 
 main {
     margin: 1em 1em 1em 1em;
     padding: 1em 1em 1em 1em;
+    border-radius: 1em;
     /* border: 1px solid black; */
     font-size: 1.5em;
     background-color: var(--header_color);
@@ -77,6 +80,7 @@ footer > ul {
     display: grid;
     grid-template-rows: 2fr 1fr;
     grid-template-columns: 1fr 1fr 1fr;
+    border-radius: 1em;
 
 }
 
