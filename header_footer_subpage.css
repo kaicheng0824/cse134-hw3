@@ -40,7 +40,6 @@ header {
     /* background-color: var(--header_color); */
     margin: 1em 1em 1em 1em;
     padding: 1em 1em 1em 1em;
-    background-image: url(asset/zen.png);
     background-size: 100% 160%;
     background-position:top;
     /* border: 1px solid black; */
