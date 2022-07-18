@@ -5,6 +5,80 @@
         <title>Kai-Wen Cheng | Professional</title>
         <link rel="icon" type="image/x-icon" href="/image/favicon.ico">
         <link rel="stylesheet" href="header_footer_subpage.css">    </head>
+    <style>
+        main {
+            padding: 1em;
+        }
+
+        main > ul > li > section > h3 {
+            font-size: 2em;
+            text-decoration: underline;
+        }
+
+        main > ul > li > section > * {
+            margin-top: auto;
+            margin-bottom: auto;
+        }
+
+        #table {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        #table > section > table {
+            margin-left: 0;
+            margin-right: auto;
+        }
+        
+        #table > section, #past_experience > section {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            grid-template-rows: 1fr 1fr;
+        }
+
+        #table > section > section > h3, #past_experience > section > h3 {
+            grid-row: 1;
+            grid-column: 1;
+        }
+
+        #table > section > section > :nth-child(2), 
+        #past_experience > section > :nth-child(2) {
+            grid-row: 2;
+            grid-column: 1;
+            margin-top: 1em;
+            margin-bottom: auto;
+        }
+
+        .exp_tag > * {
+            border-radius: 1em;
+            font-size: 0.7em;
+            padding: 0.5em;
+            margin: 0.2em;
+            border: 1px solid black;
+            display: inline-block;
+        }
+
+
+        #table > section > :nth-child(3)
+        ,#past_experience > section > :nth-child(3) {
+            grid-row: 1 /span 2;
+            grid-column: 2;
+        }
+
+        #table > section > ul > li > ul, #past_experience > section > ul > li > ul {
+            padding:1em;
+            text-align: left;
+        }
+
+        #past_experience > section > ul > li > ul > * {
+            padding-bottom: 1em;
+        }
+        #past_experience > section > ul > li > ul > li> p {
+            font-size: 0.8em;
+        }
+
+
+    </style>
     <body>
         <header>
             <section>
@@ -57,63 +131,145 @@
             </template>
         </header>
         <main>
-            <h2>Professional Main Page</h2>
-            <img src="asset/profile-2.png" height="200" width="150" alt="Profile Picture"/>
-            <section>
-                <h3>Past Experience</h3>
-            </section>
-            <hr/>
-            <section>
-                <h3>Course Taken</h3>
-                <table>
-                    <caption>Courses Taken</caption>
-                    <colgroup>
-                        <col span="1" style="background-color:yellow">
-                        <col style="background-color:azure">
-                      </colgroup>
-                    <tr>
-                        <th>Discipline</th>
-                        <th>Courses</th>
-                        </tr>
-                    <tr>
-                        <td>
-                            Computer Science
-                        </td>
-                        <td>
-                            <ol>
-                                <li>Advance Data Structures</li>
-                                <li>Software Engineering</li>
-                                <li>Web Client Languages</li>
-                            </ol>
-                        </td>
-                        </tr>
-                    <tr>
-                        <td>
-                            Computer Engineering
-                        </td>
-                        <td>
-                            <ol>
-                                <li>C Programming / System Programing</li>
-                                <li>Digital Design (WIP)</li>
-                                <li>Computer Architecture (WIP)</li>
-                            </ol>
-                        </td>
-                        </tr>
-                    <tr>
-                        <td>
-                            Circuits
-                        </td>
-                        <td>
-                            <ol>
-                                <li>Digital IC Design</li>
-                                <li>Analog IC Design</li>
-                                <li>Analog Circuits and System</li>
-                            </ol>
-                        </td>
-                        </tr>
-                </table>
-            </section>
+            <ul>
+                <li id="past_experience">
+                    <section>
+                        <h3>Past Experience</h3>
+                        <ul class="exp_tag">
+                            <li>#Power Electronics</li>
+                            <li>#Data Sciences</li>
+                            <li>#GIS</li>
+                            <li>#Software Engingeering</li>
+                            <li>#Circuit Design</li>
+                            <li>#Economics</li>
+                        </ul>
+                        <ul>
+                            <li>
+                                <ul>
+                                    <li>
+                                        <h4>UC San Diego Jacob’s School of Engineering</h4>
+                                    </li>
+                                    <li>
+                                        <h5>Data Analytics Research Intern</h5>
+                                    </li>
+                                    <li>
+                                        <p>
+                                            ●	Research under professor Yuanyuan Shi to conduct data analytics of carbon emission data from the California grid.
+                                        </p>
+                                        <p>
+                                        ●	Organize and visualized more than 100,000 entries of grid marginal emission data into heatmaps using pandas and numpy.
+                                        </p>
+                                        <p>
+                                        ●	Help develop and simulate a carbon minimizing strategy for electric vehicles using carbon emission data and charging data.
+                                        </p>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <ul>
+                                    <li>
+                                        <h4>UC San Diego Jacob’s School of Engineering</h4>
+                                    </li>
+                                    <li>
+                                        <h5>Power Electronics Research Intern</h5>
+                                    </li>
+                                    <li>
+                                        <p>
+                                            ●	Research under professor Hanh-Phuc Le to conduct simulation and hardware implementation for DC-DC power converter.
+                                        </p>
+                                        <p>
+                                            ●	Simulate a close-loop synchronous buck converter that steps down from 12V to 3V under ideal and non-ideal implementations.                                         </p>
+                                        <p>
+                                            ●	Implement and measure the designed buck converter on PCB to validate simulation results with empirical findings.                                        </p>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <ul>
 
+                                </ul>
+                            </li>
+                            <li>
+                                <ul>
+
+                                </ul>
+                            </li>
+                        </ul>
+                    </section>
+                </li>
+                <li id="table">
+                    <section>
+                        <h3>Academics</h3>
+                        <ul class="exp_tag">
+                            <li>#Power Electronics</li>
+                            <li>#Data Sciences</li>
+                            <li>#GIS</li>
+                            <li>#Software Engingeering</li>
+                            <li>#Circuit Design</li>
+                            <li>#Economics</li>
+                        </ul>
+                        <table>
+                            <caption>Courses Taken</caption>
+                            <colgroup>
+                                <col span="1" style="background-color:yellow">
+                                <col style="background-color:azure">
+                              </colgroup>
+                            <tr>
+                                <th>Discipline</th>
+                                <th>Courses</th>
+                                </tr>
+                            <tr>
+                                <td>
+                                    Computer Science
+                                </td>
+                                <td>
+                                    <ol>
+                                        <li>Advance Data Structures</li>
+                                        <li>Software Engineering</li>
+                                        <li>Web Client Languages</li>
+                                    </ol>
+                                </td>
+                                </tr>
+                            <tr>
+                                <td>
+                                    Computer Engineering
+                                </td>
+                                <td>
+                                    <ol>
+                                        <li>C Programming / System Programing</li>
+                                        <li>Digital Design (WIP)</li>
+                                        <li>Computer Architecture (WIP)</li>
+                                    </ol>
+                                </td>
+                                </tr>
+                            <tr>
+                                <td>
+                                    Circuits
+                                </td>
+                                <td>
+                                    <ol>
+                                        <li>Digital IC Design</li>
+                                        <li>Analog IC Design</li>
+                                        <li>Analog Circuits and System</li>
+                                    </ol>
+                                </td>
+                                </tr>
+                            <tr>
+                                <td>
+                                    Mathematics
+                                </td>
+                                <td>
+                                    <ol>
+                                        <li>Graph Theory</li>
+                                        <li>Calculus I, II, III</li>
+                                        <li>Discrete Math</li>
+                                    </ol>
+                                </td>
+                                </tr>
+                        </table>
+                    </section>
+                </li>
+            </ul>
         </main>
         <footer>
             <ul>
@@ -122,14 +278,6 @@
                 <li>+1 (571)-274-1675</li>
                 <li>San Diego, CA</li>
             </ul>
-            <canvas id="myCanvas" width="1000" height="100"></canvas>
-            <script>
-                var c = document.getElementById("myCanvas");
-                var ctx = c.getContext("2d");
-                ctx.moveTo(0, 50);
-                ctx.lineTo(1000, 50);
-                ctx.stroke();
-            </script>
         </footer>
     </body>
 </html>
