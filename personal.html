@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset='utf-8'/>
+        <title>Kai-Wen Cheng | Personal</title>
+        <link rel="icon" type="image/x-icon" href="/image/favicon.ico">        
+        <link rel="stylesheet" href="header_footer_subpage.css">    </head>
+    <body>
+        <header>
+            <section>
+                <ol>
+                    <li id="name_cn">
+                        <a href="index.html" title="back to home">
+                        <img src="asset/chinese.png" alt="chinese caligraphy"/></a>
+                    </li>
+                    <li id="name">
+                        <h1> <a href="index.html" title="back to home">
+                            Kai-Wen Cheng</a> 
+                        </h1>
+                    </li>
+                    <li id="quote">
+                        <p><svg height="10" width="10">
+                            <circle cx="5" cy="5" r="4" stroke="black" stroke-width="2" fill="red" />
+                          </svg> 
+                          <i>True heroism is to see the world as it, and to love it. -Roman Rolland</i>
+                          </p>
+                    </li>
+                </ol>
+            </section>
+            <nav>
+                <ol>
+                    <li><a href="about.html">About Me</a></li>
+                    <li><a href="professional.html">Professional</a></li>
+                    <li><a href="personal.html">Personal</a></li>
+                    <li><a href="contactme.html">Contact Me</a></li>
+                    <li>
+                        <form>
+                            <label for="query">Search:</label>
+                            <input list="search" name="query" id="query">
+                            <datalist id="search">
+                                <option value="Professional"></option>
+                                <option value="Resume"></option>
+                                <option value="Personal"></option>
+                                <option value="Experience"></option>
+                            </datalist>
+                            <button type="submit">
+                                Submit
+                            </button>
+                        </form>
+                    </li>
+                </ol>
+            </nav>
+
+
+            <template>
+                <p>Latest Update: </p>
+            </template>
+        </header>
+        <main>
+            <h2>Personal Main Page</h2>
+            <img src="asset/profile-2.png" height="200" width="150" alt="Profile Picture"/>
+            <section>
+                <details>
+                    <summary><h3>Travelling</h3></summary>
+                    <p>
+                        I love travelling to different places across the country and across the globe. I have been to
+                        Europe, North Americas, South America, East Asia, and Austrailia. I am looking forward to go 
+                        to more places when COVID ends!
+                    </p>
+                    <video width="200" height="360" controls>
+                        <source src="asset/travel-1.mp4"/>
+                        <strong>HTML5 Element Not Supported</strong>
+                    </video>
+                </details>
+            </section>
+
+            <section>
+                <details>
+                    <summary><h3>Hiking</h3></summary>
+                    <p>
+                        I consider myself an ameture hiker. I love going on hikes. My crecent hike is
+                        the Annie's Canyon trail in Solana Beach, CA. 
+                    </p>
+                </details>
+            </section>
+
+        </main>
+        <footer>
+            <ul>
+                <li id="legal"><p>Made By, Kai-Wen Cheng 2022 &nbsp;&copy;</p></li>
+                <li><a href="mailto:kac003@ucsd.edu">Email</a></li>
+                <li>+1 (571)-274-1675</li>
+                <li>San Diego, CA</li>
+            </ul>
+            <canvas id="myCanvas" width="1000" height="100"></canvas>
+            <script>
+                var c = document.getElementById("myCanvas");
+                var ctx = c.getContext("2d");
+                ctx.moveTo(0, 50);
+                ctx.lineTo(1000, 50);
+                ctx.stroke();
+            </script>
+        </footer>
+    </body>
+</html>

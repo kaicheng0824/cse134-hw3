@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset='utf-8'/>
+        <title>Kai-Wen Cheng | Contact Me</title>
+        <link rel="icon" type="image/x-icon" href="/image/favicon.ico">
+        <link rel="stylesheet" href="header_footer_subpage.css">    </head>
+    <body>
+        <header>
+            <section>
+                <ol>
+                    <li id="name_cn">
+                        <a href="index.html" title="back to home">
+                        <img src="asset/chinese.png" alt="chinese caligraphy"/></a>
+                    </li>
+                    <li id="name">
+                        <h1> <a href="index.html" title="back to home">
+                            Kai-Wen Cheng</a> 
+                        </h1>
+                    </li>
+                    <li id="quote">
+                        <p><svg height="10" width="10">
+                            <circle cx="5" cy="5" r="4" stroke="black" stroke-width="2" fill="red" />
+                          </svg> 
+                          <i>True heroism is to see the world as it, and to love it. -Roman Rolland</i>
+                          </p>
+                    </li>
+                </ol>
+            </section>
+            <nav>
+                <ol>
+                    <li><a href="about.html">About Me</a></li>
+                    <li><a href="professional.html">Professional</a></li>
+                    <li><a href="personal.html">Personal</a></li>
+                    <li><a href="contactme.html">Contact Me</a></li>
+                    <li>
+                        <form>
+                            <label for="query">Search:</label>
+                            <input list="search" name="query" id="query">
+                            <datalist id="search">
+                                <option value="Professional"></option>
+                                <option value="Resume"></option>
+                                <option value="Personal"></option>
+                                <option value="Experience"></option>
+                            </datalist>
+                            <button type="submit">
+                                Submit
+                            </button>
+                        </form>
+                    </li>
+                </ol>
+            </nav>
+
+
+            <template>
+                <p>Latest Update: </p>
+            </template>
+        </header>
+        <main>
+            <h2>Contact Me Main Page</h2>
+
+            <section>
+                <h3>My Calendar</h3>
+                <iframe src="https://calendar.google.com/calendar/embed?src=kac003%40ucsd.edu&ctz=America%2FLos_Angeles" style="border: 0" width="800" height="600"></iframe>
+            </section>
+            <section>
+                <h3>Send Me A Message!</h3>
+                <form>
+                    <fieldset>
+                        <legend>Basic Info:</legend>
+                        <div class="form-field">
+                            <label for="name">Name: </label>
+                            <input type="text" id="name" name="name">
+                        </div>
+                        <div class="form-field">
+                            <label for="email">Email: </label>
+                            <input type="email" id="email" name="email">
+                        </div>
+
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Message:</legend>
+                        <label for="contactType">Subject Matter:</label>
+                        <select id="contactType" name="contactType">
+                            <optgroup label="Professional">
+                                <option value="recruiting">Recruiting</option>
+                                <option value="networking">Networking</option>
+                            </optgroup>
+                            <optgroup label="Personal">
+                                <option value="friends">Make a Friend</option>
+                                <option value="suggestion">Asking for Suggestions</option>
+                            </optgroup>
+                            <optgroup label="Site Related">
+                                <option value="site-feedback">Site Feedback</option>
+                                <option value="problem">Report a Problem</option>
+                            </optgroup>
+                            <optgroup label="Site Related">
+                                <option value="other">Other</option>
+                            </optgroup>
+
+                          </select>
+                    
+                          <div class="form-field">
+                            <label for="message">Your Message:</label>
+                            <div>
+                                <textarea id="message" name="message" rows="4" cols="50" placeholder="Hi Kai, My name is..."></textarea>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <input type="submit" value="Submit">
+                </form>
+            </section>
+
+        </main>
+        <footer>
+            <ul>
+                <li id="legal"><p>Made By, Kai-Wen Cheng 2022 &nbsp;&copy;</p></li>
+                <li><a href="mailto:kac003@ucsd.edu">Email</a></li>
+                <li>+1 (571)-274-1675</li>
+                <li>San Diego, CA</li>
+            </ul>
+            <canvas id="myCanvas" width="1000" height="100"></canvas>
+            <script>
+                var c = document.getElementById("myCanvas");
+                var ctx = c.getContext("2d");
+                ctx.moveTo(0, 50);
+                ctx.lineTo(1000, 50);
+                ctx.stroke();
+            </script>
+        </footer>
+    </body>
+</html>
