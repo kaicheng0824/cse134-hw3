@@ -4,7 +4,8 @@
         <meta charset='utf-8'/>
         <title>Kai-Wen Cheng | About</title>
         <link rel="icon" type="image/x-icon" href="/image/favicon.ico">
-        <link rel="stylesheet" href="header_footer_subpage.css">
+        <link rel="stylesheet" media="screen and (min-device-width: 900px" href="header_footer_subpage_desktop.css">
+        <link rel="stylesheet" media="screen and (max-device-width: 900px" href="header_footer_subpage_phone.css">
         <style>
             summary {
                 margin-left: auto;
@@ -178,6 +179,24 @@
 
             a[href^=“http“] {
                 color: brown;
+            }
+
+            @media screen and (max-device-width: 900px){
+                section > ul {
+                   /* border: solid 1px black; */
+                   display: grid;
+                    padding: 1em;
+                    grid-template-columns: 1fr;
+                    grid-template-rows: 1fr; 
+                }
+                section > ul > li {
+                    margin: 2em;
+                    text-align: center;
+                }
+
+                aside {
+                    padding: 2em;
+                }
             }
 
             @media screen and (max-width:800px) {
