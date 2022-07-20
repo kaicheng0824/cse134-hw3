@@ -5,7 +5,114 @@
         <title>Kai-Wen Cheng | Contact Me</title>
         <link rel="icon" type="image/x-icon" href="/image/favicon.ico">
         <link rel="stylesheet" media="screen and (min-device-width: 900px" href="header_footer_subpage_desktop.css">
-        <link rel="stylesheet" media="screen and (max-device-width: 900px" href="header_footer_subpage_phone.css">  
+        <link rel="stylesheet" media="screen and (max-device-width: 900px" href="header_footer_subpage_phone.css">
+        <style>
+            #send_message > form {
+                margin-left: auto;
+                margin-right: auto;
+                width:90%;
+            }
+
+            input {
+                border-radius: 0.2em;
+                padding-top: 0.5em;
+                padding-bottom: 0.5em;
+                margin-top: auto;
+                margin-bottom: auto;
+            }
+
+            #name {
+                width:70%;
+                height: 2em;
+            }
+
+            #email {
+                width:70%;
+                height: 2em;
+            }
+
+            #submit_btn {
+                margin-top: 10px;
+                text-align: center;
+                height: 2em;
+                width: 6em;
+                font-size: 1.5em;
+                padding-top: auto;
+                padding-bottom: auto;
+            }
+
+            select {
+                border-width: 3px;
+                border-radius: 1em;
+                margin-left: 10px;
+                font-size: 1.1em;
+            }
+
+            @media screen and (max-device-width:500px) {
+                select {
+                    border-width: 3px;
+                    border-radius: 1em;
+                    margin-left: 10px;
+                    font-size: 1.8em;
+                }
+                label {
+                    font-size: 2em;
+                }
+
+                .form-field > label {
+                    font-size: 1.5em;
+                }
+
+                #submit_btn {
+                    margin-top: 10px;
+                    height: 2em;
+                    width: 5em;
+                    font-size: 1em;
+                }
+
+                .form-field {
+                    font-size: 1.5em;
+                }
+
+                option {
+                    text-align: center;
+                }
+
+                #name {
+                    width:90%;
+                    height: 2em;
+                }
+
+                #email {
+                    width:90%;
+                    height: 2em;
+                }                
+            }
+
+
+
+
+            .form-field {
+                margin-top: 0.5em;
+                margin-bottom: 0.5em;
+                margin-left: 20px;
+                text-align: left;
+                padding: 0.5em;
+            }
+
+            textarea {
+                border-width: 3px;
+                width: 70%;
+                margin-top: 0.7em;
+                font-size: 1.1em;
+            }
+
+            fieldset {
+                text-align: left;
+                font-size: 1em;
+            }
+
+        </style>  
     </head>
     <body>
         <header>
@@ -59,31 +166,30 @@
             </template>
         </header>
         <main>
-            <h2>Contact Me Main Page</h2>
-
             <section>
                 <h3>My Calendar</h3>
+                <br/>
                 <iframe src="https://calendar.google.com/calendar/embed?src=kac003%40ucsd.edu&ctz=America%2FLos_Angeles" style="border: 0" width="800" height="600"></iframe>
             </section>
-            <section>
+            <section id="send_message">
                 <h3>Send Me A Message!</h3>
                 <form>
                     <fieldset>
-                        <legend>Basic Info:</legend>
+                        <legend class="form-field">Basic Info:</legend>
                         <div class="form-field">
-                            <label for="name">Name: </label>
+                            <label for="name"><p>Name: </p></label>
                             <input type="text" id="name" name="name">
                         </div>
                         <div class="form-field">
-                            <label for="email">Email: </label>
+                            <label for="email"><p>Email: </p></label>
                             <input type="email" id="email" name="email">
                         </div>
 
                     </fieldset>
 
                     <fieldset>
-                        <legend>Message:</legend>
-                        <label for="contactType">Subject Matter:</label>
+                        <legend class="form-field"><h4>Message:</h4></legend>
+                        <label for="contactType" class="form-field"> <p class="form-field" style="display: inline-block; margin-left:0; padding: 0;">Subject Matter:</p></label>
                         <select id="contactType" name="contactType">
                             <optgroup label="Professional">
                                 <option value="recruiting">Recruiting</option>
@@ -104,17 +210,16 @@
                           </select>
                     
                           <div class="form-field">
-                            <label for="message">Your Message:</label>
+                            <label for="message"><p>Your Message:</p></label>
                             <div>
                                 <textarea id="message" name="message" rows="4" cols="50" placeholder="Hi Kai, My name is..."></textarea>
                             </div>
                         </div>
                     </fieldset>
 
-                    <input type="submit" value="Submit">
+                    <input id="submit_btn" type="submit" value="Submit">
                 </form>
             </section>
-
         </main>
         <footer>
             <ul>
@@ -123,14 +228,6 @@
                 <li>+1 (571)-274-1675</li>
                 <li>San Diego, CA</li>
             </ul>
-            <canvas id="myCanvas" width="1000" height="100"></canvas>
-            <script>
-                var c = document.getElementById("myCanvas");
-                var ctx = c.getContext("2d");
-                ctx.moveTo(0, 50);
-                ctx.lineTo(1000, 50);
-                ctx.stroke();
-            </script>
         </footer>
     </body>
 </html>
