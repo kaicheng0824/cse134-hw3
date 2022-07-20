@@ -124,6 +124,7 @@ header > section > ol {
     /* border: solid 1px black; */
     grid-row: 1;
     grid-column: 1;
+    margin-bottom: auto;
 }
 
 #name_cn a {
@@ -151,8 +152,7 @@ header > section > ol {
     text-align: center;
     padding-left: 0.5em;
     font-size: 1.2em;
-    margin-top: auto;
-    margin-bottom: auto;
+    margin-top: 20px;
     grid-row: 1;
     grid-column: 2;
 }
