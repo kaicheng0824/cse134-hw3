@@ -34,7 +34,7 @@ img {
 
 header {
     border-radius: 1em;
-    background-image: url(asset/zen.jpg);
+    background-image: url(asset/zen.webp);
     /* background-color: var(--header_color); */
     margin: 1em 1em 1em 1em;
     padding: 1em 1em 1em 1em;
