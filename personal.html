@@ -7,7 +7,7 @@
         <link rel="stylesheet" media="screen and (min-device-width: 900px" href="header_footer_subpage_desktop.css">
         <link rel="stylesheet" media="screen and (max-device-width: 900px" href="header_footer_subpage_phone.css">    
         <style>
-            summary {
+            main summary {
                 margin-left: auto;
                 margin-right: auto;
                 border: 4px solid transparent;
@@ -25,12 +25,12 @@
             .pics {
                 padding: 1em;
             }
-            summary:hover {
+            main summary:hover {
                 background: rgb(127, 115, 115);
             }
 
-            details {
-                /* transition: height 1s ease; */
+            main details {
+                transition: height 1s ease;
                 border-radius: 3rem;
                 margin-left: auto;
                 margin-right: auto;
@@ -49,7 +49,7 @@
                 margin-top: 30px;
             }
 
-            details[open] summary {
+            main details[open] summary {
                 animation: expand 0.6s ease-in-out;
                 animation-fill-mode: forwards;
             }
@@ -58,6 +58,7 @@
                 0%    {opacity: 1; margin-bottom: -10px}
                 100%  {opacity: 1; margin-top: 0px}
             }
+
         </style>
     </head>
     <body>
@@ -82,8 +83,32 @@
                     </li>
                 </ol>
             </section>
-            <nav>
-                <ol>
+            <nav id="nav_bar">
+                <details id="hamburger">
+                    <summary><img src="asset/hamburger_icon.png" alt="hamburger menu icon" width="60" height="60"></summary>
+                    <ol id="nav_list_phone">
+                        <li><a href="about.html"><h4>About Me</h4></a></li>
+                        <li><a href="professional.html"><h4>Professional</h4></a></li>
+                        <li><a href="personal.html"><h4>Personal</h4></a></li>
+                        <li><a href="contactme.html"><h4>Contact Me</h4></a></li>
+                        <li>
+                            <form>
+                                <label for="query">Search:</label>
+                                <input list="search" name="query" id="query">
+                                <datalist id="search">
+                                    <option value="Professional"></option>
+                                    <option value="Resume"></option>
+                                    <option value="Personal"></option>
+                                    <option value="Experience"></option>
+                                </datalist>
+                                <button type="submit" id="search_btn_nav">
+                                    Submit
+                                </button>
+                            </form>
+                        </li>
+                    </ol>        
+                </details>
+                <ol id="nav_list_desktop">
                     <li><a href="about.html">About Me</a></li>
                     <li><a href="professional.html">Professional</a></li>
                     <li><a href="personal.html">Personal</a></li>
@@ -113,7 +138,7 @@
         </header>
         <main>
             <section>
-                <details>
+                <details open>
                     <summary><h3>Travelling</h3></summary>
                     <p>
                         I love travelling to different places across the country and across the globe. I have been to
@@ -176,7 +201,7 @@
             </section>
 
             <section>
-                <details>
+                <details open>
                     <summary><h3>Hiking</h3></summary>
                     <p>
                         I consider myself an ameture hiker. I love going on hikes. My crecent hike is

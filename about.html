@@ -7,46 +7,6 @@
         <link rel="stylesheet" media="screen and (min-device-width: 900px" href="header_footer_subpage_desktop.css">
         <link rel="stylesheet" media="screen and (max-device-width: 900px" href="header_footer_subpage_phone.css">
         <style>
-            summary {
-                margin-left: auto;
-                margin-right: auto;
-                border: 4px solid transparent;
-                outline: none;
-                padding: 1rem;
-                display: block;
-                background: rgba(99, 87, 87, 0.5);
-                color: white;
-                padding-left: 2.2rem;
-                position: relative;
-                cursor: pointer;
-                border-radius: 3rem;
-            }
-
-            summary:hover {
-                background: rgb(127, 115, 115);
-            }
-
-            details {
-                /* transition: height 1s ease; */
-                border-radius: 3rem;
-                margin-left: auto;
-                margin-right: auto;
-                padding: 1rem;
-                max-width: 500px;
-                box-sizing: border-box;
-                margin-top: 5px;
-                background: rgb(127, 115, 115,0.2);
-            }
-
-            details[open] summary {
-                animation: expand 0.6s ease-in-out;
-                animation-fill-mode: forwards;
-            }
-
-            @keyframes expand {
-                0%    {opacity: 1; margin-bottom: -10px}
-                100%  {opacity: 1; margin-top: 0px}
-            }
             section {
                 padding: 0.5em;
             }
@@ -244,8 +204,32 @@
                     </li>
                 </ol>
             </section>
-            <nav>
-                <ol>
+            <nav id="nav_bar">
+                <details id="hamburger">
+                    <summary><img src="asset/hamburger_icon.png" alt="hamburger menu icon" width="60" height="60"></summary>
+                    <ol id="nav_list_phone">
+                        <li><a href="about.html">About Me</a></li>
+                        <li><a href="professional.html">Professional</a></li>
+                        <li><a href="personal.html">Personal</a></li>
+                        <li><a href="contactme.html">Contact Me</a></li>
+                        <li>
+                            <form>
+                                <label for="query">Search:</label>
+                                <input list="search" name="query" id="query">
+                                <datalist id="search">
+                                    <option value="Professional"></option>
+                                    <option value="Resume"></option>
+                                    <option value="Personal"></option>
+                                    <option value="Experience"></option>
+                                </datalist>
+                                <button type="submit" id="search_btn_nav">
+                                    Submit
+                                </button>
+                            </form>
+                        </li>
+                    </ol>        
+                </details>
+                <ol id="nav_list_desktop">
                     <li><a href="about.html">About Me</a></li>
                     <li><a href="professional.html">Professional</a></li>
                     <li><a href="personal.html">Personal</a></li>
