@@ -128,15 +128,16 @@ p {
 
 @keyframes swapPhoto {
     0% {
-        content: url(../asset/profile-2.png);
+        content: url(../asset/profile-2.webp);
     }
     50% {
         opacity: 0.5;
     }
     100% {
-        content: url(../asset/profile-3.png);
+        content: url(../asset/profile-3.webp);
     }
 }
+
 
 footer {
     background-color: rgb(255,255,255,1);
