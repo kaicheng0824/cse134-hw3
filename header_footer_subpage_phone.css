@@ -48,6 +48,7 @@ header {
 header > * {
     opacity: 1;
     background-color: var(--header_color);
+    padding-bottom: 1em;
 }
 
 header:hover {
@@ -77,6 +78,7 @@ footer > ul {
     grid-template-rows: 2fr 1fr;
     grid-template-columns: 1fr 1fr 1fr;
     border-radius: 1em;
+    font-size: 1rem;
 
 }
 
@@ -200,11 +202,26 @@ nav > ol > li {
     font-size: 0.6em;
 }
 
-input {
+/* input {
     width: 9em;
     height: 0.3em;
     border-radius: 3em;
     font-size: 0.6em;
+    margin-top: auto;
+    margin-bottom: auto;
+} */
+
+select {
+    border-width: 3px;
+    border-radius: 1em;
+    margin-left: 10px;
+    font-size: 1.8em;
+}
+
+input {
+    border-radius: 0.2em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
     margin-top: auto;
     margin-bottom: auto;
 }
