@@ -188,7 +188,7 @@ header > nav > ol > li > a:hover {
 nav > ol {
     display: grid;
     grid-template-columns: 1fr;
-    grid-row: 1fr 1fr 1fr 1fr;
+    grid-row: 1fr 1fr 1fr 1fr  1fr;
 }
 nav > ol > li {
     font-size: 1.5em;
