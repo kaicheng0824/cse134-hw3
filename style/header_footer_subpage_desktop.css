@@ -200,7 +200,7 @@ header > nav > ol > li > a:hover {
 
 nav > ol {
     display: grid;
-    grid-template-columns: repeat(1fr,4) 2fr;
+    grid-template-columns: repeat(4,1fr) 2fr;
     grid-template-rows: 1fr;
 }
 
