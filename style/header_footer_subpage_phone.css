@@ -190,6 +190,7 @@ nav > ol {
     grid-template-columns: 1fr;
     grid-row: 1fr 1fr 1fr 1fr  1fr;
 }
+
 nav > ol > li {
     font-size: 1.5em;
     margin-top: 0.5em;
