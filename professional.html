@@ -7,145 +7,147 @@
         <link rel="icon" type="image/x-icon" href="/image/favicon.ico">
         <link rel="stylesheet" media="(min-device-width: 900)" href="./style/header_footer_subpage_desktop.css">
         <link rel="stylesheet" media="(max-device-width: 900)" href="./style/header_footer_subpage_phone.css"> 
+    
+        <style>
+            main {
+                padding: 1em;
+            }
+    
+            main > ul > li > section > h3 {
+                font-size: 2em;
+                text-decoration: underline;
+            }
+    
+            main > ul > li > section > * {
+                margin-top: auto;
+                margin-bottom: auto;
+            }
+    
+            #table {
+                margin-left: auto;
+                margin-right: auto;
+            }
+    
+            #table > section > table {
+                margin-left: 0;
+                margin-right: auto;
+                width: 85%
+            }
+            
+            #table > section, #past_experience > section {
+                display: grid;
+                grid-template-columns: 1fr 2fr;
+                grid-template-rows: 1fr 1fr;
+            }
+    
+            #table > section > section > h3, #past_experience > section > h3 {
+                grid-row: 1;
+                grid-column: 1;
+            }
+    
+            #table > section > section > :nth-child(2), 
+            #past_experience > section > :nth-child(2) {
+                grid-row: 2;
+                grid-column: 1;
+                margin-top: 1em;
+                margin-bottom: auto;
+            }
+    
+            .exp_tag > * {
+                border-radius: 1em;
+                font-size: 0.7em;
+                padding: 0.5em;
+                margin: 0.2em;
+                border: 1px solid black;
+                display: inline-block;
+            }
+    
+            .exp_tag > *:hover {
+                background-color: #D1D1D1;
+            }
+    
+    
+            #table > section > :nth-child(3)
+            ,#past_experience > section > :nth-child(3) {
+                margin-left: 4em;
+                grid-row: 1 /span 2;
+                grid-column: 2;
+            }
+    
+            #table > section > ul > li > ul, #past_experience > section > ul > li > ul {
+                padding-top: 1em ;
+                text-align: left;
+            }
+    
+            #past_experience > section > ul > li > ul > * {
+                padding-bottom: 1em;
+            }
+            #past_experience > section > ul > li > ul > li> p {
+                font-size: 0.8em;
+            }
+    
+            th {
+                background-color: rgb(193, 193, 153);
+                border: 1px solid black;
+                padding: 0.5em;
+            }
+    
+            tr:nth-child(even) {
+                background-color: #E1E1E1;
+            }
+    
+            td {
+                border: 1px solid black;
+                padding: 0.5em;
+            }
+    
+            td > ol > * {
+                list-style-type:square;
+                margin-left: 2em;
+                text-align: left;
+            }
+    
+            h4 {
+                font-size: 2rem;
+            }
+            caption > h4 {
+                padding-bottom: 1rem;
+            }
+            h5 {
+                font-size: 1.5rem;
+            }
+    
+            @media screen and (max-device-width: 900px){
+                #table > section, #past_experience > section {
+                    display: block;
+                }
+                .exp_tag {
+                    margin-top: 1em;
+                    margin-bottom: 1em;
+                    font-size: 2em;
+                }
+                table {
+                    font-size: 1.5em;
+                }
+            }
+            @media screen and (max-width:800px) {
+                #table > section, #past_experience > section {
+                    display: block;
+                }
+                .exp_tag {
+                    margin-top: 1em;
+                    margin-bottom: 1em;
+                    font-size: 2em;
+                }
+                table {
+                    font-size: 1.5em;
+                }
+            }
+    
+    
+        </style>
     </head>
-    <style>
-        main {
-            padding: 1em;
-        }
 
-        main > ul > li > section > h3 {
-            font-size: 2em;
-            text-decoration: underline;
-        }
-
-        main > ul > li > section > * {
-            margin-top: auto;
-            margin-bottom: auto;
-        }
-
-        #table {
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        #table > section > table {
-            margin-left: 0;
-            margin-right: auto;
-            width: 85%
-        }
-        
-        #table > section, #past_experience > section {
-            display: grid;
-            grid-template-columns: 1fr 2fr;
-            grid-template-rows: 1fr 1fr;
-        }
-
-        #table > section > section > h3, #past_experience > section > h3 {
-            grid-row: 1;
-            grid-column: 1;
-        }
-
-        #table > section > section > :nth-child(2), 
-        #past_experience > section > :nth-child(2) {
-            grid-row: 2;
-            grid-column: 1;
-            margin-top: 1em;
-            margin-bottom: auto;
-        }
-
-        .exp_tag > * {
-            border-radius: 1em;
-            font-size: 0.7em;
-            padding: 0.5em;
-            margin: 0.2em;
-            border: 1px solid black;
-            display: inline-block;
-        }
-
-        .exp_tag > *:hover {
-            background-color: #D1D1D1;
-        }
-
-
-        #table > section > :nth-child(3)
-        ,#past_experience > section > :nth-child(3) {
-            margin-left: 4em;
-            grid-row: 1 /span 2;
-            grid-column: 2;
-        }
-
-        #table > section > ul > li > ul, #past_experience > section > ul > li > ul {
-            padding-top: 1em ;
-            text-align: left;
-        }
-
-        #past_experience > section > ul > li > ul > * {
-            padding-bottom: 1em;
-        }
-        #past_experience > section > ul > li > ul > li> p {
-            font-size: 0.8em;
-        }
-
-        th {
-            background-color: rgb(193, 193, 153);
-            border: 1px solid black;
-            padding: 0.5em;
-        }
-
-        tr:nth-child(even) {
-            background-color: #E1E1E1;
-        }
-
-        td {
-            border: 1px solid black;
-            padding: 0.5em;
-        }
-
-        td > ol > * {
-            list-style-type:square;
-            margin-left: 2em;
-            text-align: left;
-        }
-
-        h4 {
-            font-size: 2rem;
-        }
-        caption > h4 {
-            padding-bottom: 1rem;
-        }
-        h5 {
-            font-size: 1.5rem;
-        }
-
-        @media screen and (max-device-width: 900px){
-            #table > section, #past_experience > section {
-                display: block;
-            }
-            .exp_tag {
-                margin-top: 1em;
-                margin-bottom: 1em;
-                font-size: 2em;
-            }
-            table {
-                font-size: 1.5em;
-            }
-        }
-        @media screen and (max-width:800px) {
-            #table > section, #past_experience > section {
-                display: block;
-            }
-            .exp_tag {
-                margin-top: 1em;
-                margin-bottom: 1em;
-                font-size: 2em;
-            }
-            table {
-                font-size: 1.5em;
-            }
-        }
-
-
-    </style>
     <body>
         <header>
             <section>
