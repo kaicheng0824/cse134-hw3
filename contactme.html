@@ -5,8 +5,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Kai-Wen Cheng | Contact Me</title>
         <link rel="icon" type="image/x-icon" href="/image/favicon.ico">
-        <link rel="stylesheet" media="(min-device-width: 900px)" href="./style/header_footer_subpage_desktop.css">
-        <link rel="stylesheet" media="(max-device-width: 900px)" href="./style/header_footer_subpage_phone.css">  
+        <link rel="stylesheet" media="min-device-width: 900px" href="./style/header_footer_subpage_desktop.css">
+        <link rel="stylesheet" media="max-device-width: 900px" href="./style/header_footer_subpage_phone.css">  
         <style>
             #send_message > form {
                 margin-left: auto;
@@ -181,8 +181,8 @@
                     <fieldset>
                         <legend class="form-field">Basic Info:</legend>
                         <div class="form-field">
-                            <label for="name">Name: </label>
-                            <input type="text" id="name" name="name">
+                            <label for="nameInput">Name: </label>
+                            <input type="text" id="nameInput" name="nameInput">
                         </div>
                         <div class="form-field">
                             <label for="email">Email: </label>
@@ -193,7 +193,7 @@
 
                     <fieldset>
                         <legend class="form-field"><h4>Message:</h4></legend>
-                        <label for="contactType" class="form-field" style="display: inline-block; margin-left:0; padding: 0;"> Subject Matter: </label>
+                        <label for="contactType" class="form-field" style="display: inline-block;"> Subject Matter: </label>
                         <select id="contactType" name="contactType">
                             <optgroup label="Professional">
                                 <option value="recruiting">Recruiting</option>
